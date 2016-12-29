@@ -1,0 +1,108 @@
+@bgOrg 		: #fdb400;
+@bgGreen 	: #24c483;
+@bgGray 	: #b9b9b9;
+@darkBorder	: #590900;
+@darkRed	: #b61d22;
+@grayFont 	: #777;
+
+/*reset*/
+*{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}img{border:0;}address,caption,cite,code,dfn,em,strong,th{font-style:normal}ol,ul{list-style:none;}body{font-family: noto_sansregular, "Microsoft Yahei", arial;font-size:14px;color:#333;background-color: white;}
+::-webkit-input-placeholder { color:#333; } 
+input{outline:none;-webkit-tap-highlight-color:transparent;tap-highlight-color:transparent;-webkit-appearance:searchfield;appearance:searchfield;padding:0;margin:0;}
+select{-webkit-tap-highlight-color:transparent;tap-highlight-color:transparent;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block; }
+a{text-decoration:none; }
+
+#app{
+	padding-bottom: 12px;
+}
+
+.popup{
+	.con{
+		width: 506px;
+		// margin: 0 12px;
+		background: #24c483 url(../images/bg_fs.png) no-repeat center 0; 
+		background-size: 328px 384px;
+		border-radius: 14px;
+		position: absolute;
+		left: 50%;
+		top: 10%;
+		transform: translate(-50%, 0);
+		padding-bottom: 20px;
+
+		.tip{
+			margin: 2px 10px 0;
+			color: white;
+			font-size: 14px;
+			line-height: 22px;
+			background-color: rgba(0,0,0, .3);
+			border-radius: 10px;
+			padding: 3px 10px;
+			display: inline-block;
+		}
+
+		.cj{
+			overflow: hidden;
+			margin: 15px auto;
+			background: @darkBorder;
+			border-radius: 5px;
+			width: 294px;
+			border: 1px solid @darkBorder;
+
+			span{
+				float: left;
+				width: 96px;
+				height: 96px;
+				border: 1px solid @darkBorder;
+				border-radius: 5px;
+				background: url() no-repeat center center / 80px 80px;
+				text-align: center;
+				line-height: 96px;
+				font-size: 22px;
+
+				&:nth-child(even){
+					background-color: @bgOrg !important;
+				}
+
+				&:nth-child(odd){
+					background-color: #ff4444 !important;
+				}
+
+				&.start,
+				&.cur{
+					background-color: #f4d75f!important;
+				}
+
+				&.start{
+					background: url(../images/startcj.png) no-repeat center center /50px;
+				}
+
+			}
+
+			&+p{
+				padding: 0 15px 15px;
+				line-height: 20px;
+				color: white;
+			}
+		}
+
+		.target{
+			text-align: center;
+
+			select{
+				width: 100px;
+				height: 30px;
+				line-height: 30px;
+				// background-color: lighten(#24c483, 10%);
+				font-size: 14px;
+			}
+		}
+
+		.msg{
+			text-align: center;
+			line-height: 20px;
+			font-size: 16px;
+			padding-top: 10px;
+		}
+	}
+}
